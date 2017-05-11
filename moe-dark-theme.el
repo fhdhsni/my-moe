@@ -57,7 +57,7 @@ Moe, moe, kyun!")
    `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
    `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
    `(trailing-whitespace ((,class (:background ,red-3))))
-   `(show-paren-match ((,class (:background ,blue-3 :foreground nil))))
+   `(show-paren-match ((,class (:background nil :foreground ,magenta-2 :weight bold))))
    `(header-line ((,class (:background ,blue-3 :foreground ,white-0))))
    `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
 
@@ -588,9 +588,14 @@ Moe, moe, kyun!")
    `(term-color-yellow ((,class (:background ,orange-2 :foreground ,orange-2))))
 
    ;; git-gutter (&-fringe)
-   `(git-gutter:added ((,class (:foreground ,green-4 :background ,green-0 ))))
-   `(git-gutter:deleted ((,class (:foreground ,red-3 :background ,red-00 ))))
-   `(git-gutter:modified ((,class (:foreground ,yellow-4 :background ,yellow-0 ))))
+   `(git-gutter:added ((,class (:foreground ,green-1 :background nil ))))
+   `(git-gutter:deleted ((,class (:foreground ,red-3 :background nil ))))
+   `(git-gutter:modified ((,class (:foreground ,yellow-1 :background nil ))))
+
+   ;; spaceline
+   '(spaceline-highlight-face-modified ((t (:slant italic :weight semi-light :family "Inconsolata"))))
+   '(spaceline-modified ((t (:background "DarkGoldenrod2" :foreground "#3E3D31" :inherit (quote mode-line)))))
+   '(spaceline-unmodified ((t (:background "#afd7ff" :foreground "#3E3D31" :inherit (quote mode-line)))))
 
    ;; Swoop
    `(swoop-face-header-format-line ((,class (:foreground ,black-6 :background nil :underline nil))))
@@ -643,6 +648,7 @@ Moe, moe, kyun!")
    `(web-mode-type-face ((,class (:foreground ,cyan-3))))
 
    ;; Custom
+   ;; '(custom-variable-tag ((,class (:weight normal :background ,blue-0 :foreground ,blue-3))))
    `(custom-button ((,class (:background ,blue-0 :foreground ,blue-3
                                          :box (:line-width 1 :style released-button)))))
    `(custom-button-mouse ((,class (:background ,blue-00 :foreground ,black-3
