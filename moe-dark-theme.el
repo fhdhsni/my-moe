@@ -62,9 +62,9 @@ Moe, moe, kyun!")
    `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
 
    ;; Mode line & frames' faces
-   `(mode-line ((,class (:box nil :background ,blue-0 :foreground ,blue-3))))
+   `(mode-line ((,class (:box nil :background nil :foreground  ,purple-1))))
    `(mode-line-inactive ((,class (:box nil :background ,black-2-5 :foreground ,white-1))))
-   `(mode-line-buffer-id ((,class (:box nil :foreground ,black-5 :background nil ))))
+   `(mode-line-buffer-id ((,class (:box nil :foreground ,blue-0 :background nil ))))
    `(vertical-border ((,class (:foreground ,black-3 :background ,black-3))))
 
    ;; Escape and prompt faces
