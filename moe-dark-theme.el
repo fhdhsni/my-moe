@@ -30,8 +30,7 @@ Moe, moe, kyun!")
       (red-0 "#ff4b4b") (red-00 "#ffafaf")
       (magenta-0 "#ffafd7") (magenta-00 "#ffd7ff")
       (orange-0 "#ffaf87") (orange-00 "#ffd787") (orange-000 "#ffd7af")
-      (linum-dark "#87875f") (linum-light "#d7d7af")
-      )
+      (linum-dark "#87875f") (linum-light "#d7d7af"))
 
 
   (custom-theme-set-faces
@@ -43,7 +42,7 @@ Moe, moe, kyun!")
                (:foreground ,white-1 :background ,black-5))
               (,class
                (:foreground ,white-1 :background ,black-5))))
-   `(cursor ((,class (:background ,red-0))))
+   `(cursor ((,class (:background ,white-0))))
 
    ;; Highlighting faces
    `(fringe ((,class (:foreground ,black-1 :background ,black-3))))
@@ -52,23 +51,23 @@ Moe, moe, kyun!")
    `(highlight ((,class (:background ,black-3))))
    `(hl-line ((,class (:background ,black-4))))
    `(highlight-symbol-face ((,class (:background ,green-5))))
-   `(region ((,class (:foreground ,black-3 :background ,green-0))))
+   `(region ((,class (:foreground ,black-5 :background ,blue-0))))
    `(secondary-selection ((,class (:background ,blue-3 :foreground ,white-0))))
-   `(isearch ((,class (:foreground ,white-1 :background ,orange-3))))
-   `(lazy-highlight ((,class (:background ,magenta-3 :foreground ,white-1))))
+   `(isearch ((,class (:foreground ,black-6 :background ,orange-0))))
+   `(lazy-highlight ((,class (:background nil :foreground ,orange-3))))
    `(trailing-whitespace ((,class (:background ,red-3))))
    `(show-paren-match ((,class (:background nil :foreground ,magenta-2 :weight bold))))
    `(header-line ((,class (:background ,blue-3 :foreground ,white-0))))
    `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
 
    ;; Mode line & frames' faces
-   `(mode-line ((,class (:box nil :background nil :foreground  ,purple-1))))
+   `(mode-line ((,class (:box nil :background ,black-3 :foreground  ,green-2))))
    `(mode-line-inactive ((,class (:box nil :background ,black-2-5 :foreground ,white-1))))
-   `(mode-line-buffer-id ((,class (:box nil :foreground ,blue-0 :background nil ))))
+   `(mode-line-buffer-id ((,class (:box nil :foreground ,blue-1 :background nil ))))
    `(vertical-border ((,class (:foreground ,black-3 :background ,black-3))))
 
    ;; Escape and prompt faces
-   `(minibuffer-prompt ((,class (:foreground ,black-3 :background ,green-2))))
+   `(minibuffer-prompt ((,class (:foreground ,green-02 :background nil))))
    `(escape-glyph ((,class (:foreground ,yellow-3))))
    `(error ((,class (:foreground ,red-0))))
    `(warning ((,class (:foreground ,orange-1))))
@@ -221,33 +220,57 @@ Moe, moe, kyun!")
    `(link ((,class (:underline t :foreground ,blue-1))))
    `(link-visited ((,class (:underline t :foreground ,blue-2))))
 
-   ;; Helm
-   `(helm-bookmark-directory ((,class (:foreground ,blue-1 :background ,black-5 ))))
-   `(helm-bookmark-file ((,class (:foreground ,yellow-4 :background ,yellow-0))))
-   `(helm-bookmark-info ((,class (:foreground ,green-4 :background ,green-0))))
-   `(helm-buffer-directory ((,class (:foreground ,blue-1 ))))
-   `(helm-buffer-process ((,class (:foreground ,magenta-2))))
-   `(helm-buffer-saved-out ((,class (:foreground ,red-2 :background ,black-5))))
-   `(helm-buffer-size ((,class (:foreground ,orange-2))))
-   `(helm-candidate-number ((,class (:foreground ,blue-3 :background ,white-0))))
-   `(helm-ff-directory ((,class (:foreground ,blue-1 :background ,black-5 ))))
-   `(helm-ff-excutable ((,class (:foreground ,green-1 :background ,black-5 ))))
-   `(helm-ff-file ((,class (:foreground ,white-1 :background ,black-5))))
-   `(helm-ff-invalid-symlink ((,class (:foreground ,white-1 :background ,red-2))))
-   `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
-   `(helm-grep-cmd-line ((,class (:foreground ,green-4 :background ,green-00 ))))
-   `(helm-grep-file ((,class (:foreground ,purple-1))))
-   `(helm-grep-finish ((,class (:foreground ,green-2))))
-   `(helm-grep-lineno ((,class (:foreground ,orange-2))))
-   `(helm-grep-match ((,class (:background ,black-4 :foreground ,yellow-1 ))))
-   `(helm-grep-running ((,class (:foreground ,red-0 :background nil))))
-   `(helm-header ((,class (:foreground ,blue-3 :background ,blue-0))))
-   `(helm-lisp-show-completion ((,class (:foreground ,black-3 :background ,green-0))))
-   `(helm-match ((,class (:foreground ,green-2 :background ,black-5 ))))
-   `(helm-selection ((,class (:foreground nil :background ,blue-3))))
-   `(helm-selection-line ((,class (:foreground nil :background ,yellow-4))))
-   `(helm-source-header ((,class (:foreground ,white-0 :background ,black-2-5 ))))
-   `(helm-visible-mark ((,class (:foreground ,magenta-2 :background ,magenta-0))))
+   ;; ;; Helm
+   ;; `(helm-bookmark-directory ((,class (:foreground ,blue-1 :background ,black-5 ))))
+   ;; `(helm-bookmark-file ((,class (:foreground ,yellow-4 :background ,yellow-0))))
+   ;; `(helm-bookmark-info ((,class (:foreground ,green-4 :background ,green-0))))
+   ;; `(helm-buffer-directory ((,class (:foreground ,blue-1 ))))
+   ;; `(helm-buffer-process ((,class (:foreground ,magenta-2))))
+   ;; `(helm-buffer-saved-out ((,class (:foreground ,red-2 :background ,black-5))))
+   ;; `(helm-buffer-size ((,class (:foreground ,orange-2))))
+   ;; `(helm-candidate-number ((,class (:foreground ,blue-3 :background ,white-0))))
+   ;; `(helm-ff-directory ((,class (:foreground ,blue-1 :background ,black-5 ))))
+   ;; `(helm-ff-excutable ((,class (:foreground ,green-1 :background ,black-5 ))))
+   ;; `(helm-ff-file ((,class (:foreground ,white-1 :background ,black-5))))
+   ;; `(helm-ff-invalid-symlink ((,class (:foreground ,white-1 :background ,red-2))))
+   ;; `(helm-ff-prefix ((,class (:foreground ,white-1 :background ,orange-2))))
+   ;; `(helm-grep-cmd-line ((,class (:foreground ,green-4 :background ,green-00 ))))
+   ;; `(helm-grep-file ((,class (:foreground ,purple-1))))
+   ;; `(helm-grep-finish ((,class (:foreground ,green-2))))
+   ;; `(helm-grep-lineno ((,class (:foreground ,orange-2))))
+   ;; `(helm-grep-match ((,class (:background ,black-4 :foreground ,yellow-1 ))))
+   ;; `(helm-grep-running ((,class (:foreground ,red-0 :background nil))))
+   ;; `(helm-header ((,class (:foreground ,blue-3 :background ,blue-0))))
+   ;; `(helm-lisp-show-completion ((,class (:foreground ,black-3 :background ,green-0))))
+   ;; `(helm-match ((,class (:foreground ,green-2 :background ,black-5 ))))
+   ;; `(helm-selection ((,class (:foreground ,red-00 :background nil, :weight normal :underline t))))
+   ;; `(helm-selection-line ((,class (:foreground nil :background ,yellow-4))))
+   ;; `(helm-source-header ((,class (:foreground ,white-0
+   ;;                                            :background nil
+   ;;                                            :family "quicksand"
+   ;;                                            :weight bold
+   ;;                                            :foreground ,purple-1
+   ;;                                            :height 1.2))))
+   ;; `(helm-visible-mark ((,class (:foreground ,magenta-2 :background ,magenta-0))))
+
+   ;; ivy-mode
+   `(ivy-current-match ((,class (:foreground ,red-00 :bold nil :underline t))))
+   `(ivy-confirm-face ((,class (:foreground ,green-4 :background ,green-00 :bold nil))))
+   `(ivy-subdir ((,class (:foreground ,blue-1 :bold nil))))
+   `(ivy-virtual ((,class (:foreground ,magenta-3))))
+
+   `(ivy-minibuffer-match-face-1 ((,class (:background nil :foreground ,white-0))))
+   `(ivy-minibuffer-match-face-2 ((,class (:bold nil :background nil :foreground ,white-0))))
+   `(ivy-minibuffer-match-face-3 ((,class (:bold nil :background nil :foreground ,white-0))))
+   `(ivy-minibuffer-match-face-4 ((,class (:bold nil :background nil :foreground ,white-0))))
+
+   ;; swiper
+   `(swiper-match-face-1 ((,class (:background ,blue-1 :foreground ,white-0))))
+   `(swiper-match-face-2 ((,class (:bold nil :background nil :foreground ,white-0))))
+   `(swiper-match-face-3 ((,class (:bold nil :background ,magenta-2 :foreground ,white-0))))
+   `(swiper-match-face-4 ((,class (:bold nil :background ,cyan-3 :foreground ,white-0))))
+   `(swiper-line-face ((,class (:foreground ,orange-2 :bold nil :inherit highlight))))
+
 
    ;; Dired/Dired+
    `(dired-directory ((,class (:foreground ,blue-1 ))))
@@ -592,20 +615,20 @@ Moe, moe, kyun!")
    `(git-gutter:deleted ((,class (:foreground ,red-3 :background nil ))))
    `(git-gutter:modified ((,class (:foreground ,yellow-1 :background nil ))))
 
-   ;; spaceline
-   '(spaceline-highlight-face-modified ((t (:slant italic :weight semi-light :family "Inconsolata"))))
-   '(spaceline-modified ((t (:background "DarkGoldenrod2" :foreground "#3E3D31" :inherit (quote mode-line)))))
-   '(spaceline-unmodified ((t (:background "#afd7ff" :foreground "#3E3D31" :inherit (quote mode-line)))))
+   ;; ;; spaceline
+   ;; '(spaceline-highlight-face-modified ((t (:slant italic :weight semi-light :family "Inconsolata"))))
+   ;; '(spaceline-modified ((t (:background "DarkGoldenrod2" :foreground "#3E3D31" :inherit (quote mode-line)))))
+   ;; '(spaceline-unmodified ((t (:background "#afd7ff" :foreground "#3E3D31" :inherit (quote mode-line)))))
 
-   ;; Swoop
-   `(swoop-face-header-format-line ((,class (:foreground ,black-6 :background nil :underline nil))))
-   `(swoop-face-line-buffer-name ((,class (:foreground ,green-4 :background ,green-0))))
-   `(swoop-face-line-number ((,class (:foreground "#87875f" :background "#d7d7af"))))
-   `(swoop-face-target-line ((,class (:foreground ,yellow-1 :background ,black-2-5))))
-   `(swoop-face-target-words ((,class (:foreground ,magenta-1 :background ,black-2-5 ))))
-   `(helm-swoop-target-line-block-face ((,class (:foreground ,yellow-1 :background ,black-3))))
-   `(helm-swoop-target-line-face ((,class (:foreground ,yellow-1 :background ,black-2-5))))
-   `(helm-swoop-target-word-face ((,class (:foreground ,magenta-3 :background ,magenta-0 ))))
+   ;; ;; Swoop
+   ;; `(swoop-face-header-format-line ((,class (:foreground ,black-6 :background nil :underline nil))))
+   ;; `(swoop-face-line-buffer-name ((,class (:foreground ,green-4 :background ,green-0))))
+   ;; `(swoop-face-line-number ((,class (:foreground "#87875f" :background "#d7d7af"))))
+   ;; `(swoop-face-target-line ((,class (:foreground ,yellow-1 :background ,black-2-5))))
+   ;; `(swoop-face-target-words ((,class (:foreground ,magenta-1 :background ,black-2-5 ))))
+   ;; `(helm-swoop-target-line-block-face ((,class (:foreground ,yellow-1 :background ,black-3))))
+   ;; `(helm-swoop-target-line-face ((,class (:foreground ,yellow-1 :background ,black-2-5))))
+   ;; `(helm-swoop-target-word-face ((,class (:foreground ,magenta-3 :background ,magenta-0 ))))
 
    ;; table
    `(table-cell ((,class (:foreground ,white-0 :background ,black-3))))
@@ -627,6 +650,7 @@ Moe, moe, kyun!")
    `(info-menu-header ((,class (:foreground ,white-0  :underline t))))
    `(info-menu-star ((,class (:foreground ,red-1))))
    `(info-node ((,class (:foreground ,red-3))))
+   `(Info-quoted ((,class (:foreground ,purple-00 :inherit nil))))
    `(info-title-1 ((,class (:foreground ,blue-1 ))))
    `(info-title-2 ((,class (:foreground ,green-2 ))))
    `(info-title-3 ((,class (:foreground ,orange-2 ))))
@@ -639,6 +663,13 @@ Moe, moe, kyun!")
    `(tty-menu-disabled-face ((,class (:foreground ,black-2-5 :background ,black-3))))
    `(tty-menu-enabled-face ((,class (:foreground ,white-0 :background ,black-3 ))))
    `(tty-menu-selected-face ((,class (:background ,blue-3))))
+
+   ;; Hydra
+   `(hydra-face-red ((,class (:foreground ,red-0 :bold nil))))
+   `(hydra-face-blue ((,class (:foreground ,blue-1 :bold nil))))
+   `(hydra-face-amaranth ((,class (:foreground ,magenta-2 :bold nil))))
+   `(hydra-face-pink ((,class (:foreground ,red-1 :bold nil))))
+   `(hydra-face-teal ((,class (:foreground ,blue-2 :bold nil))))
 
    ;; web-mode
    `(web-mode-comment-face ((,class (:foreground ,black-2-5))))
@@ -655,6 +686,8 @@ Moe, moe, kyun!")
                                                :box (:line-width 1 :style released-button)))))
    `(custom-button-pressed ((,class (:foreground ,black-3 :background ,white-1
                                                  :box (:line-width 1 :style pressed-button)))))
+
+   `(button ((,class (:weight thin :foreground ,blue-1 :underline t))))
 
    (custom-theme-set-variables
     'moe-dark
