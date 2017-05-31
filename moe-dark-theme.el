@@ -61,10 +61,10 @@ Moe, moe, kyun!")
    `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
 
    ;; Mode line & frames' faces
-   `(mode-line ((,class (:box nil :background ,black-3 :foreground  ,green-2))))
-   `(mode-line-inactive ((,class (:box nil :background ,black-2-5 :foreground ,white-1))))
-   `(mode-line-buffer-id ((,class (:box nil :foreground ,blue-1 :background nil ))))
-   `(vertical-border ((,class (:foreground ,black-3 :background ,black-3))))
+   `(mode-line ((,class (:box nil :background ,white-0 :foreground ,black-6))))
+   `(mode-line-inactive ((,class (:box nil :background ,black-4 :foreground ,black-2 :inherit nil))))
+   `(mode-line-buffer-id ((,class (:background nil))))
+   `(vertical-border ((,class (:foreground nil :background nil))))
 
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:foreground ,green-02 :background nil))))
@@ -549,7 +549,8 @@ Moe, moe, kyun!")
 
    ;; Comint prompt
    `(comint-highlight-prompt ((,class (:foreground ,white-0 :background ,black-2-5 ))))
-
+   `(comint-highlight-input ((,class (:weight normal))))
+   
    ;; which-function-mode
    `(which-func ((,class (:foreground ,white-0 :background ,orange-2))))
 
@@ -665,11 +666,11 @@ Moe, moe, kyun!")
    `(tty-menu-selected-face ((,class (:background ,blue-3))))
 
    ;; Hydra
-   `(hydra-face-red ((,class (:foreground ,red-0 :bold nil))))
-   `(hydra-face-blue ((,class (:foreground ,blue-1 :bold nil))))
-   `(hydra-face-amaranth ((,class (:foreground ,magenta-2 :bold nil))))
-   `(hydra-face-pink ((,class (:foreground ,red-1 :bold nil))))
-   `(hydra-face-teal ((,class (:foreground ,blue-2 :bold nil))))
+   `(hydra-face-red ((,class (:foreground ,red-0 :weight book))))
+   `(hydra-face-blue ((,class (:foreground ,blue-01 :weight book))))
+   `(hydra-face-amaranth ((,class (:foreground ,magenta-2 :weight book))))
+   `(hydra-face-pink ((,class (:foreground ,red-1 :weight book))))
+   `(hydra-face-teal ((,class (:foreground ,blue-1 :weight book))))
 
    ;; web-mode
    `(web-mode-comment-face ((,class (:foreground ,black-2-5))))
