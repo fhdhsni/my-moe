@@ -56,7 +56,8 @@ Moe, moe, kyun!")
    `(isearch ((,class (:foreground ,black-6 :background ,orange-0))))
    `(lazy-highlight ((,class (:background nil :foreground ,orange-3))))
    `(trailing-whitespace ((,class (:background ,red-3))))
-   `(show-paren-match ((,class (:background nil :foreground ,magenta-2 :weight bold))))
+   ;; `(show-paren-match ((,class (:background nil :foreground ,magenta-2 :weight bold))))
+   `(show-paren-match ((,class (:background ,black-6))))
    `(header-line ((,class (:background ,blue-3 :foreground ,white-0))))
    `(help-argument-name ((,class (:foreground ,magenta-1 :italic t))))
 
@@ -271,11 +272,10 @@ Moe, moe, kyun!")
    `(swiper-match-face-4 ((,class (:bold nil :background ,cyan-3 :foreground ,white-0))))
    `(swiper-line-face ((,class (:foreground ,orange-2 :bold nil :inherit highlight))))
 
-
    ;; Dired/Dired+
    `(dired-directory ((,class (:foreground ,blue-1 ))))
    `(dired-flagged ((,class (:foreground ,red-1))))
-   `(dired-header ((,class (:foreground ,black-5 :background ,green-2 ))))
+   `(dired-header ((,class (:foreground ,white-1 :background nil :weight normal))))
    `(dired-ignored ((,class (:foreground ,black-1))))
    `(dired-mark ((,class (:foreground ,green-1))))
    `(dired-marked ((,class (:foreground ,green-2))))
@@ -678,6 +678,9 @@ Moe, moe, kyun!")
    `(web-mode-current-column-highlight-face ((,class (:background ,black-3))))
    `(web-mode-symbol-face ((,class (:foreground ,yellow-2))))
    `(web-mode-type-face ((,class (:foreground ,cyan-3))))
+
+   ;; bm
+   `(bm-face ((,class (:foreground ,black-6 :background ,blue-1))))
 
    ;; Custom
    ;; '(custom-variable-tag ((,class (:weight normal :background ,blue-0 :foreground ,blue-3))))
